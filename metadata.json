@@ -1,0 +1,8 @@
+{
+  "name": "DR. OH's Premium Consulting",
+  "description": "A high-end personal branding and consulting landing page for C-level executives, designed with a deep navy and gold aesthetic.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
