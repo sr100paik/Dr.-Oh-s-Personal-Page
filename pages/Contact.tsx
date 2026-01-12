@@ -72,13 +72,13 @@ const Contact: React.FC = () => {
 
       {/* Map or Contact Info */}
       <section className="py-24 bg-slate-900 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+          <div className="space-y-8 flex flex-col justify-start pt-8 md:pt-12">
             <h3 className="text-3xl font-bold serif">사무소 안내</h3>
             <div className="space-y-6">
               <div>
                 <div className="text-gold font-bold mb-1">한국벤처협동조합 (본부)</div>
-                <div className="text-white/70">서울특별시 서초구 반포대로 14길 54 신성오피스텔 410호</div>
+                <div className="text-white/70">서울특별시 서초구 반포대로 14길 54, 신성오피스텔</div>
               </div>
               <div>
                 <div className="text-gold font-bold mb-1">Office Hours</div>
@@ -90,20 +90,42 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="h-[400px] bg-white/5 border border-white/10 rounded-sm flex items-center justify-center relative overflow-hidden">
-             <div className="absolute inset-0 opacity-20 pointer-events-none">
+          
+          {/* Service Summary Section */}
+          <div className="bg-navy border border-gold/30 p-8 md:p-12 rounded-sm relative overflow-hidden flex flex-col justify-center">
+             <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                   <defs>
-                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="gray" strokeWidth="0.5"/>
+                    <pattern id="grid-contact" width="30" height="30" patternUnits="userSpaceOnUse">
+                      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#fbbf24" strokeWidth="0.5"/>
                     </pattern>
                   </defs>
-                  <rect width="100%" height="100%" fill="url(#grid)" />
+                  <rect width="100%" height="100%" fill="url(#grid-contact)" />
                 </svg>
              </div>
-             <div className="text-center z-10">
-               <div className="text-gold text-4xl mb-4">📍</div>
-               <div className="text-white/50 text-sm">Security Area: Authorized Personnel Only</div>
+             
+             <div className="relative z-10">
+                <div className="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-6">Pro OH's Solutions</div>
+                <h4 className="text-2xl font-bold serif mb-8 text-white">7대 핵심 경영 지원 서비스</h4>
+                <ul className="space-y-4">
+                  {[
+                    "리스크 해지 솔루션 (분쟁/이탈 방지)",
+                    "경영권 보호 및 전략적 지분 구조 설계",
+                    "글로벌 펀드용 IR 자료 작성 템플릿",
+                    "유니콘 등극을 위한 성장 로드맵 수립",
+                    "전략적 투자 유치 및 자금 조달 설계",
+                    "AI 기반 투자심사 알고리즘 대응",
+                    "KOSDAQ 및 NASDAQ IPO 로드맵 지원"
+                  ].map((service, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <span className="text-gold font-bold">0{idx + 1}</span>
+                      <span className="text-white/70 text-sm md:text-base">{service}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-10 pt-6 border-t border-white/10 text-xs text-white/30 italic">
+                  * 각 서비스는 기업 진단 후 맞춤형으로 패키징되어 제공됩니다.
+                </div>
              </div>
           </div>
         </div>

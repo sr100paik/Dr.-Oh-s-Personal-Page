@@ -23,7 +23,7 @@ const Insights: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl font-bold serif mb-6">경영 <span className="text-gold">인사이트</span></h1>
           <p className="text-xl text-white/60 leading-relaxed">
-            오 박사의 철학과 방법론을 통해 기업의 근본적인 체력을 강화하십시오.
+            Pro OH의 철학과 방법론을 통해 기업의 근본적인 체력을 강화하십시오.
             경영자가 갖춰야 할 시대를 관통하는 통찰을 제공합니다.
           </p>
         </div>
@@ -37,8 +37,8 @@ const Insights: React.FC = () => {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
             </div>
             <div>
-              <h2 className="text-2xl font-bold serif">오 박사 AI 경영 어드바이저</h2>
-              <p className="text-sm text-white/40">Dr. Oh's logic-based insight generator (Powered by Gemini)</p>
+              <h2 className="text-2xl font-bold serif">Pro OH AI 경영 어드바이저</h2>
+              <p className="text-sm text-white/40">Pro OH's logic-based insight generator (Powered by Gemini)</p>
             </div>
           </div>
 
@@ -68,13 +68,13 @@ const Insights: React.FC = () => {
               disabled={loading}
               className={`w-full bg-gold text-navy font-bold py-4 rounded-sm transition-all ${loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-amber-500 hover:scale-[1.02]'}`}
             >
-              {loading ? '통찰력 생성 중...' : '오 박사의 조언 요청하기'}
+              {loading ? '통찰력 생성 중...' : 'Pro OH의 조언 요청하기'}
             </button>
           </div>
 
           {result && (
             <div className="mt-12 p-8 bg-white/5 border-l-4 border-gold animate-in slide-in-from-top-4 duration-500">
-              <h3 className="text-xl font-bold text-gold mb-6 serif">오 박사의 통찰 리포트</h3>
+              <h3 className="text-xl font-bold text-gold mb-6 serif">Pro OH의 통찰 리포트</h3>
               <div className="text-white/80 leading-loose whitespace-pre-wrap text-lg">
                 {result}
               </div>

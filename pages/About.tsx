@@ -11,8 +11,8 @@ const About: React.FC = () => {
             <div className="absolute -inset-4 border-2 border-gold/30 rounded-sm -z-10 translate-x-4 translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform"></div>
             <img 
               src={IMAGES.PORTRAIT} 
-              alt="Dr. Oh Se-geun Portrait" 
-              className="w-full aspect-[2/3] object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
+              alt="Pro OH Se-geun Portrait" 
+              className="w-full aspect-[4/5] object-cover rounded-sm transition-all duration-700 shadow-2xl"
             />
           </div>
           <div className="space-y-8">
@@ -25,8 +25,8 @@ const About: React.FC = () => {
             </p>
             <div className="space-y-6">
               <p className="text-white/60 leading-loose">
-                오세근 박사는 1989년부터 경실련 중앙위원으로 활동하며 사회 전반의 경제 구조를 통찰해왔습니다. 
-                NIA u-korea 추진 정책위원장 및 전정부 대통령 벤처정책위원장을 역임하며 대한민국 벤처 생태계의 기틀을 마련했습니다. 
+                오세근 프로는 1989년부터 경실련 중앙위원으로 활동하며 사회 전반의 경제 구조를 통찰해왔습니다. 
+                NIA U-Korea 추진 정책위원장 및 전정부 대통령 벤처정책위원장을 역임하며 대한민국 벤처 생태계의 기틀을 마련했습니다. 
                 현재 한국벤처협동조합 이사장으로서 유니콘/데카콘을 꿈꾸는 기업들에게 실질적인 투자 유치와 IPO 솔루션을 제공하고 있습니다.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6">
@@ -35,7 +35,7 @@ const About: React.FC = () => {
                   <ul className="text-sm text-white/60 space-y-2">
                     <li>• 한국벤처협동조합 이사장 (현)</li>
                     <li>• 대통령 벤처정책위원장 (전)</li>
-                    <li>• NIA-u korea 추진 정책/법제도위원장</li>
+                    <li>• NIA-U Korea 추진 정책/법제도위원장</li>
                     <li>• KNS뉴스통신 논설위원</li>
                     <li>• 숭실대/성심여대 등 벤처투자심사역</li>
                   </ul>
@@ -62,7 +62,7 @@ const About: React.FC = () => {
           <h2 className="text-4xl font-bold serif text-center mb-16">전문 분야 (Expertise)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { area: "IcT 분야", items: ["모바일", "와이브로", "IPTV", "네트워크", "웹경제"] },
+              { area: "ICT 분야", items: ["모바일", "와이브로", "IPTV", "네트워크", "웹경제"] },
               { area: "미래 학문", items: ["산업 트렌드 분석", "미래학", "디지털 자산", "블록체인"] },
               { area: "경영 관리", items: ["“메일로 읽는 경영” 개발", "시스템 구축", "거버넌스"] },
               { area: "창업 전략", items: ["기업가 정신", "비즈니스 모델", "시장성 분석"] }

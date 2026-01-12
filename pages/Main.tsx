@@ -129,7 +129,7 @@ const Main: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { 
-                text: "법률적 다툼과 주주간 분쟁으로 힘들 때 오세근 박사님의 리스크 해지 솔루션이 결정적이었습니다. 덕분에 다시 사업의 본질에 집중할 수 있었습니다.",
+                text: "법률적 다툼과 주주간 분쟁으로 힘들 때 오세근 프로님의 리스크 해지 솔루션이 결정적이었습니다. 덕분에 다시 사업의 본질에 집중할 수 있었습니다.",
                 name: "최OO", position: "CEO", company: "A사(나스닥 상장 준비)"
               },
               {
@@ -158,7 +158,7 @@ const Main: React.FC = () => {
         <div className="relative z-10 max-w-4xl mx-auto space-y-8">
           <h2 className="text-4xl font-bold serif">유니콘으로 <span className="text-gold">성장</span>을 원한다면, <br />지금 바로 파트너가 되십시오.</h2>
           <p className="text-lg text-white/70">
-            신년 전략과 자금 연계로 성공적 추진을 약속합니다. <br />
+            글로벌 전략과 자금 연계로 성공적 추진을 약속합니다. <br />
             {BRAND_NAME}이 직접 진단하고 로드맵을 제시합니다.
           </p>
           <Link 

@@ -16,7 +16,7 @@ const Header = () => {
     <header className="fixed w-full z-50 bg-[#0f172a]/90 backdrop-blur-sm border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold tracking-tighter flex items-center gap-2">
-          <span className="text-gold serif">DR. OH</span>
+          <span className="text-gold serif">Pro OH</span>
           <span className="text-xs text-white/40 uppercase tracking-widest hidden sm:inline">Management Consulting</span>
         </Link>
 
@@ -75,7 +75,7 @@ const Footer = () => (
   <footer className="bg-slate-950 border-t border-white/5 py-12 px-6">
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
       <div className="space-y-4">
-        <div className="text-2xl font-bold text-gold serif">DR. OH</div>
+        <div className="text-2xl font-bold text-gold serif">Pro OH</div>
         <p className="text-white/50 text-sm leading-relaxed">
           귀사의 지속 가능한 성장과 위기 극복을 위한<br />
           최고의 전략적 파트너가 되어 드립니다.
@@ -84,9 +84,9 @@ const Footer = () => (
       <div>
         <h4 className="text-white font-bold mb-4">Contact</h4>
         <ul className="text-white/50 text-sm space-y-2">
-          <li>서울특별시 강남구 테헤란로 (VIP 오피스)</li>
-          <li>contact@droh-consulting.com</li>
-          <li>02-XXX-XXXX (예약 전용)</li>
+          <li>서울특별시 서초구 반포대로 14길 54, 신성오피스텔</li>
+          <li>skoh-ok@hanmail.net</li>
+          <li>02-588-6989 (예약 전용)</li>
         </ul>
       </div>
       <div>
@@ -102,7 +102,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 text-center text-white/30 text-xs">
-      &copy; {new Date().getFullYear()} DR. OH Consulting. All rights reserved.
+      &copy; {new Date().getFullYear()} Pro OH Consulting. All rights reserved.
     </div>
   </footer>
 );
