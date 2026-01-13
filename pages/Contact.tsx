@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
 
           <div className="space-y-2">
             <label className="text-xs text-gold font-bold uppercase tracking-widest">Inquiry Type</label>
-            <select className="w-full bg-white/5 border border-white/10 px-4 py-3 focus:border-gold outline-none transition-colors appearance-none">
+            <select className="w-full bg-white/5 border border-white/10 px-4 py-3 focus:border-gold outline-none transition-colors appearance-none text-white/80">
               <option className="bg-navy">유니콘/데카콘 성장 로드맵 자문</option>
               <option className="bg-navy">국내외 투자 유치 및 펀딩 설계</option>
               <option className="bg-navy">국내 IPO 및 나스닥(NASDAQ) 상장 자문</option>
@@ -70,29 +70,26 @@ const Contact: React.FC = () => {
         </form>
       </section>
 
-      {/* Map or Contact Info */}
+      {/* Insightful Comparison Section */}
       <section className="py-24 bg-slate-900 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           <div className="space-y-8 flex flex-col justify-start pt-8 md:pt-12">
-            <h3 className="text-3xl font-bold serif">사무소 안내</h3>
-            <div className="space-y-6">
-              <div>
-                <div className="text-gold font-bold mb-1">한국벤처협동조합 (본부)</div>
-                <div className="text-white/70">서울특별시 서초구 반포대로 14길 54, 신성오피스텔</div>
-              </div>
-              <div>
-                <div className="text-gold font-bold mb-1">Office Hours</div>
-                <div className="text-white/70">평일 09:00 - 18:00 (사전 예약 필수)</div>
-              </div>
-              <div>
-                <div className="text-gold font-bold mb-1">Contact</div>
-                <div className="text-white/70">Tel: 02-588-6989 | skoh-ok@hanmail.net</div>
-              </div>
+            <div className="inline-block px-3 py-1 bg-gold/10 text-gold text-xs font-bold uppercase tracking-widest mb-4">Strategic Insight</div>
+            <h3 className="text-3xl md:text-4xl font-bold serif leading-tight">
+              한국벤처협동조합 성장 로드맵 vs <br /> 
+              <span className="text-gold">포춘 500 성공 요인</span>
+            </h3>
+            <p className="text-white/50 text-lg leading-relaxed max-w-xl">
+              포춘 500 기업의 글로벌 스탠다드와 한국 대표 기업들의 성공 사례를 분석하여 <br className="hidden md:block" />
+              귀사의 유니콘 도약을 위한 명확한 준거 기준을 제시합니다.
+            </p>
+            
+            <div className="p-8 bg-gold/5 border-l-4 border-gold rounded-sm italic text-white/80">
+              "포춘 500 기업의 핵심 가치는 우리 조합이 추구하는 성장 철학과 정확히 일치합니다."
             </div>
           </div>
           
-          {/* Service Summary Section */}
-          <div className="bg-navy border border-gold/30 p-8 md:p-12 rounded-sm relative overflow-hidden flex flex-col justify-center">
+          <div className="bg-navy border border-gold/30 p-8 md:p-12 rounded-sm relative overflow-hidden flex flex-col">
              <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                   <defs>
@@ -104,27 +101,68 @@ const Contact: React.FC = () => {
                 </svg>
              </div>
              
-             <div className="relative z-10">
-                <div className="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-6">Pro OH's Solutions</div>
-                <h4 className="text-2xl font-bold serif mb-8 text-white">7대 핵심 경영 지원 서비스</h4>
-                <ul className="space-y-4">
+             <div className="relative z-10 space-y-10">
+                <div className="space-y-8">
                   {[
-                    "리스크 해지 솔루션 (분쟁/이탈 방지)",
-                    "경영권 보호 및 전략적 지분 구조 설계",
-                    "글로벌 펀드용 IR 자료 작성 템플릿",
-                    "유니콘 등극을 위한 성장 로드맵 수립",
-                    "전략적 투자 유치 및 자금 조달 설계",
-                    "AI 기반 투자심사 알고리즘 대응",
-                    "KOSDAQ 및 NASDAQ IPO 로드맵 지원"
-                  ].map((service, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <span className="text-gold font-bold">0{idx + 1}</span>
-                      <span className="text-white/70 text-sm md:text-base">{service}</span>
-                    </li>
+                    {
+                      num: "01",
+                      title: "성장 로드맵 설계 및 실행 지원",
+                      factors: [
+                        { label: "포춘 500 요인", text: "장기적 비전과 전략적 실행" },
+                        { label: "한국 기업 적용", text: "삼성·현대차의 글로벌 로드맵 선도" }
+                      ]
+                    },
+                    {
+                      num: "02",
+                      title: "투자 유치 단계별 전략",
+                      factors: [
+                        { label: "포춘 500 요인", text: "안정적 자금 조달과 글로벌 투자자 신뢰" },
+                        { label: "한국 기업 적용", text: "네이버·카카오의 벤처 투자와 플랫폼 확장" }
+                      ]
+                    },
+                    {
+                      num: "03",
+                      title: "글로벌 상장 로드맵 (IPO)",
+                      factors: [
+                        { label: "포춘 500 요인", text: "글로벌 감각과 시장 적응력" },
+                        { label: "한국 기업 적용", text: "삼성·현대차의 글로벌 공급망 및 브랜드 전략" }
+                      ]
+                    },
+                    {
+                      num: "04",
+                      title: "경영 시스템 구축",
+                      factors: [
+                        { label: "포춘 500 요인", text: "투명한 지배구조와 ESG 경영" },
+                        { label: "한국 기업 적용", text: "삼성의 ESG 강화 및 한전의 친환경 전환" }
+                      ]
+                    }
+                  ].map((item, idx) => (
+                    <div key={idx} className="group">
+                      <div className="flex items-center gap-3 mb-3 border-b border-white/5 pb-2">
+                        <span className="text-gold font-bold serif text-xl">{item.num}</span>
+                        <h4 className="text-lg font-bold text-white group-hover:text-gold transition-colors">{item.title}</h4>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-8">
+                        {item.factors.map((f, i) => (
+                          <div key={i}>
+                            <div className="text-[10px] text-gold/60 font-bold uppercase tracking-widest mb-1">{f.label}</div>
+                            <div className="text-sm text-white/70">{f.text}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   ))}
-                </ul>
-                <div className="mt-10 pt-6 border-t border-white/10 text-xs text-white/30 italic">
-                  * 각 서비스는 기업 진단 후 맞춤형으로 패키징되어 제공됩니다.
+                </div>
+
+                <div className="mt-12 pt-8 border-t border-gold/20">
+                  <div className="flex items-center gap-2 mb-4 text-gold font-bold">
+                    <span className="text-xl">⚡️</span>
+                    <span className="uppercase tracking-widest text-sm">종합 시사점</span>
+                  </div>
+                  <p className="text-sm text-white/60 leading-relaxed italic">
+                    포춘 500 기업은 혁신·리더십·인재·문화·사회적 가치·지속 가능성을 갖춥니다. <br />
+                    한국벤처협동조합이 제시하는 성장 전략은 글로벌 성공 모델과 정확히 맞닿아 있습니다.
+                  </p>
                 </div>
              </div>
           </div>
