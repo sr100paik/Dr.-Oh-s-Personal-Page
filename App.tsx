@@ -71,41 +71,73 @@ const Header = () => {
   );
 };
 
-const Footer = () => (
-  <footer className="bg-slate-950 border-t border-white/5 py-12 px-6">
-    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-      <div className="space-y-4">
-        <div className="text-2xl font-bold text-gold serif">Pro OH</div>
-        <p className="text-white/50 text-sm leading-relaxed">
-          귀사의 지속 가능한 성장과 위기 극복을 위한<br />
-          최고의 전략적 파트너가 되어 드립니다.
-        </p>
-      </div>
-      <div>
-        <h4 className="text-white font-bold mb-4">Contact</h4>
-        <ul className="text-white/50 text-sm space-y-2">
-          <li>서울특별시 서초구 반포대로 14길 54, 신성오피스텔</li>
-          <li>skoh-ok@hanmail.net</li>
-          <li>02-588-6989 (예약 전용)</li>
-        </ul>
-      </div>
-      <div>
-        <h4 className="text-white font-bold mb-4">Newsletter</h4>
-        <div className="flex gap-2">
-          <input 
-            type="email" 
-            placeholder="이메일 주소" 
-            className="bg-white/5 border border-white/10 rounded-sm px-4 py-2 text-sm w-full focus:outline-none focus:border-gold" 
-          />
-          <button className="bg-gold text-navy px-4 py-2 rounded-sm text-sm font-bold">구독</button>
+const Footer = () => {
+  const [selectedSite, setSelectedSite] = useState('');
+
+  const handleGo = () => {
+    if (selectedSite) {
+      window.open(selectedSite, '_blank');
+    } else {
+      alert('방문하실 사이트를 선택해주세요.');
+    }
+  };
+
+  return (
+    <footer className="bg-slate-950 border-t border-white/5 py-16 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="space-y-4">
+          <div className="text-2xl font-bold text-gold serif">Pro OH</div>
+          <p className="text-white/50 text-sm leading-relaxed">
+            귀사의 지속 가능한 성장과 위기 극복을 위한<br />
+            최고의 전략적 파트너가 되어 드립니다.
+          </p>
+        </div>
+        <div>
+          <h4 className="text-white font-bold mb-6">Contact</h4>
+          <ul className="text-white/50 text-sm space-y-2">
+            <li>서울특별시 서초구 반포대로 14길 54, 신성오피스텔</li>
+            <li>skoh-ok@hanmail.net</li>
+            <li>02-588-6989 (예약 전용)</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-2xl font-bold text-white mb-6 serif">Family Site</h4>
+          <div className="flex items-stretch gap-2">
+            <div className="flex-grow relative">
+              <select 
+                value={selectedSite}
+                onChange={(e) => setSelectedSite(e.target.value)}
+                className="w-full bg-white/5 border border-white/10 text-white/70 px-4 py-4 rounded-sm outline-none focus:border-gold transition-colors appearance-none text-sm"
+              >
+                <option value="" className="bg-slate-950">관계회사 선택</option>
+                <option value="http://www.kovenco.or.kr/" className="bg-slate-950">한국벤처협동조합</option>
+                <option value="https://bizfromatoz.com" className="bg-slate-950">100% 인사이트</option>
+                <option value="https://www.mss.go.kr/" className="bg-slate-950">중소벤처기업부</option>
+              </select>
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/30">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+            <button 
+              onClick={handleGo}
+              className="bg-gold text-navy px-6 font-bold rounded-sm hover:bg-amber-500 transition-colors whitespace-nowrap"
+            >
+              이동
+            </button>
+          </div>
+          <p className="mt-4 text-[11px] text-white/30 italic">
+            * 관계회사 홈페이지로 바로 연결됩니다.
+          </p>
         </div>
       </div>
-    </div>
-    <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 text-center text-white/30 text-xs">
-      &copy; {new Date().getFullYear()} Pro OH Consulting. All rights reserved.
-    </div>
-  </footer>
-);
+      <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 text-center text-white/30 text-xs tracking-widest uppercase">
+        &copy; {new Date().getFullYear()} Pro OH Consulting. All rights reserved.
+      </div>
+    </footer>
+  );
+};
 
 const App: React.FC = () => {
   return (
