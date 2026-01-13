@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
         <h1 className="text-5xl font-bold serif mb-6">VIP <span className="text-gold">상담 신청</span></h1>
         <p className="text-xl text-white/60 max-w-2xl mx-auto">
           유니콘/데카콘으로 성장을 원하는 기업을 위한 특별 진단입니다. <br />
-          모든 신청 정보는 한국벤처협동조합의 엄격한 보안 규정에 의해 보호됩니다.
+          모든 신청 정보는 Pro OH 컨설팅의 엄격한 보안 규정에 의해 보호됩니다.
         </p>
       </div>
 
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
               <span className="text-sm font-bold text-gold uppercase tracking-widest">보안 및 비밀 유지 서약</span>
             </div>
             <p className="text-xs text-white/50 leading-relaxed">
-              본 신청 양식을 통해 제공되는 모든 기밀 정보는 한국벤처협동조합의 보안 프로토콜에 따라 관리됩니다. 
+              본 신청 양식을 통해 제공되는 모든 기밀 정보는 Pro OH 컨설팅의 보안 프로토콜에 따라 관리됩니다. 
               {BRAND_NAME}은 상담 과정에서 취득한 모든 정보를 외부에 유출하지 않을 것을 엄숙히 약속합니다.
             </p>
           </div>
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
           <div className="space-y-8 flex flex-col justify-start pt-8 md:pt-12">
             <div className="inline-block px-3 py-1 bg-gold/10 text-gold text-xs font-bold uppercase tracking-widest mb-4">Strategic Insight</div>
             <h3 className="text-3xl md:text-4xl font-bold serif leading-tight">
-              한국벤처협동조합 성장 로드맵 vs <br /> 
+              Pro OH 컨설팅 성장 로드맵 vs <br /> 
               <span className="text-gold">포춘 500 성공 요인</span>
             </h3>
             <p className="text-white/50 text-lg leading-relaxed max-w-xl">
@@ -85,7 +85,7 @@ const Contact: React.FC = () => {
             </p>
             
             <div className="p-8 bg-gold/5 border-l-4 border-gold rounded-sm italic text-white/80">
-              "포춘 500 기업의 핵심 가치는 우리 조합이 추구하는 성장 철학과 정확히 일치합니다."
+              "포춘 500 기업의 핵심 가치는 우리 컨설팅이 추구하는 성장 철학과 정확히 일치합니다."
             </div>
           </div>
           
@@ -101,7 +101,8 @@ const Contact: React.FC = () => {
                 </svg>
              </div>
              
-             <div className="relative z-10 space-y-10">
+             {/* lg:pt-10 추가하여 왼쪽 타이틀과 높이 맞춤 */}
+             <div className="relative z-10 space-y-10 lg:pt-10">
                 <div className="space-y-8">
                   {[
                     {
@@ -161,7 +162,7 @@ const Contact: React.FC = () => {
                   </div>
                   <p className="text-sm text-white/60 leading-relaxed italic">
                     포춘 500 기업은 혁신·리더십·인재·문화·사회적 가치·지속 가능성을 갖춥니다. <br />
-                    한국벤처협동조합이 제시하는 성장 전략은 글로벌 성공 모델과 정확히 맞닿아 있습니다.
+                    Pro OH 컨설팅이 제시하는 성장 전략은 글로벌 성공 모델과 정확히 맞닿아 있습니다.
                   </p>
                 </div>
              </div>
