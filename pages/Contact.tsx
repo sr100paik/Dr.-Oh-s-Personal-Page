@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
           
-          <div className="bg-navy p-8 md:p-12 rounded-sm relative overflow-hidden flex flex-col">
+          <div className="bg-navy pt-8 md:pt-12 px-8 md:px-12 pb-12 rounded-sm relative overflow-hidden flex flex-col">
              <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                   <defs>
@@ -101,8 +101,7 @@ const Contact: React.FC = () => {
                 </svg>
              </div>
              
-             {/* lg:pt-10 추가하여 왼쪽 타이틀과 높이 맞춤 */}
-             <div className="relative z-10 space-y-10 lg:pt-10">
+             <div className="relative z-10 space-y-10 lg:pt-[4.5rem]">
                 <div className="space-y-8">
                   {[
                     {
@@ -153,17 +152,6 @@ const Contact: React.FC = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-
-                <div className="mt-12 pt-8 border-t border-gold/20">
-                  <div className="flex items-center gap-2 mb-4 text-gold font-bold">
-                    <span className="text-xl">⚡️</span>
-                    <span className="uppercase tracking-widest text-sm">종합 시사점</span>
-                  </div>
-                  <p className="text-sm text-white/60 leading-relaxed italic">
-                    포춘 500 기업은 혁신·리더십·인재·문화·사회적 가치·지속 가능성을 갖춥니다. <br />
-                    Pro OH 컨설팅이 제시하는 성장 전략은 글로벌 성공 모델과 정확히 맞닿아 있습니다.
-                  </p>
                 </div>
              </div>
           </div>
