@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
 
           <div className="space-y-2">
             <label className="text-xs text-gold font-bold uppercase tracking-widest">Current Challenge</label>
-            <textarea rows={6} className="w-full bg-white/5 border border-white/10 px-4 py-3 focus:border-gold outline-none transition-colors" placeholder="기업의 현재 상황과 해결하고자 하는 핵심 난제를 적어주세요."></textarea>
+            <textarea rows={6} className="w-full bg-white/5 border border-white/10 px-4 py-3 focus:border-gold outline-none transition-colors" placeholder="기업의 현재 상황과 해결하고자 하는 핵심 Pain Point를 적어주세요."></textarea>
           </div>
 
           <div className="p-6 bg-gold/5 border border-gold/20 rounded-sm">
