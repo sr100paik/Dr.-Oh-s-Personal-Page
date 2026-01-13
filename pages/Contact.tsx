@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
           
-          <div className="bg-navy border border-gold/30 p-8 md:p-12 rounded-sm relative overflow-hidden flex flex-col">
+          <div className="bg-navy p-8 md:p-12 rounded-sm relative overflow-hidden flex flex-col">
              <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                   <defs>

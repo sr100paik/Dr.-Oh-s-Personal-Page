@@ -75,7 +75,9 @@ const Footer = () => {
   const [selectedSite, setSelectedSite] = useState('');
 
   const handleGo = () => {
-    if (selectedSite) {
+    if (selectedSite === 'no-url') {
+      alert('해당 파트너의 홈페이지 정보가 없습니다.');
+    } else if (selectedSite) {
       window.open(selectedSite, '_blank');
     } else {
       alert('방문하실 사이트를 선택해주세요.');
@@ -109,10 +111,10 @@ const Footer = () => {
                 onChange={(e) => setSelectedSite(e.target.value)}
                 className="w-full bg-white/5 border border-white/10 text-white/70 px-4 py-4 rounded-sm outline-none focus:border-gold transition-colors appearance-none text-sm"
               >
-                <option value="" className="bg-slate-950">관계회사 선택</option>
-                <option value="http://www.kovenco.or.kr/" className="bg-slate-950">한국벤처협동조합</option>
+                <option value="" className="bg-slate-950">파트너 선택</option>
+                <option value="https://dr-oh-s-personal-page.vercel.app" className="bg-slate-950">Pro OH 컨설팅</option>
                 <option value="https://bizfromatoz.com" className="bg-slate-950">100% 인사이트</option>
-                <option value="https://www.mss.go.kr/" className="bg-slate-950">중소벤처기업부</option>
+                <option value="no-url" className="bg-slate-950">회계법인</option>
               </select>
               <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/30">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
