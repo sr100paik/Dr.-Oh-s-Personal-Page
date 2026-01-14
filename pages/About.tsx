@@ -59,23 +59,103 @@ const About: React.FC = () => {
       {/* Specialty Fields */}
       <section className="py-24 bg-slate-900 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold serif text-center mb-16">전문 분야 (Expertise)</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { area: "ICT 분야", items: ["모바일", "와이브로", "IPTV", "네트워크", "웹경제"] },
-              { area: "미래 학문", items: ["산업 트렌드 분석", "미래학", "디지털 자산", "블록체인"] },
-              { area: "경영 관리", items: ["“메일로 읽는 경영” 개발", "시스템 구축", "거버넌스"] },
-              { area: "창업 전략", items: ["기업가 정신", "비즈니스 모델", "시장성 분석"] }
-            ].map((field, i) => (
-              <div key={i} className="bg-navy p-8 border border-white/5 rounded-sm">
-                <h4 className="text-gold font-bold mb-4 serif text-lg">{field.area}</h4>
-                <ul className="text-sm text-white/50 space-y-2">
-                  {field.items.map((item, j) => (
-                    <li key={j}>• {item}</li>
-                  ))}
-                </ul>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold serif mb-4">전문 분야 (Specialized Expertise)</h2>
+            <div className="w-24 h-1 bg-gold mx-auto"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Category 1: 유니콘/데카콘 육성 */}
+            <div className="bg-navy p-10 border border-white/5 rounded-sm hover:border-gold/30 transition-colors group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                </div>
+                <h4 className="text-xl font-bold text-white serif">유니콘/데카콘 육성 및 전략</h4>
               </div>
-            ))}
+              <ul className="space-y-4">
+                {[
+                  { t: "성장 로드맵 수립", d: "기업 성장 단계별 맞춤형 로드맵 제시 및 실행 지원" },
+                  { t: "리스크 관리", d: "법률 다툼, 주주 분쟁 등 기업 리디자인을 통한 리스크 해지" },
+                  { t: "경영권 보호", d: "성장 과정에서의 경영권 보호 및 최적 지분 구조 설계" },
+                  { t: "글로벌 진출", d: "국내 및 나스닥(NASDAQ) IPO 로드맵 제공" }
+                ].map((item, idx) => (
+                  <li key={idx} className="border-l-2 border-gold/20 pl-4 py-1">
+                    <div className="text-gold font-bold text-sm mb-1">{item.t}</div>
+                    <div className="text-white/50 text-xs leading-relaxed">{item.d}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Category 2: 투자 유치 및 IR */}
+            <div className="bg-navy p-10 border border-white/5 rounded-sm hover:border-gold/30 transition-colors group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <h4 className="text-xl font-bold text-white serif">국내외 투자 유치 및 IR 고도화</h4>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  { t: "글로벌 VC 네트워크", d: "국내를 넘어 해외 VC까지 연계한 투자 유치 안내" },
+                  { t: "IR 자료 최적화", d: "미국식 IR 작성법 및 대형 펀드용 자료 템플릿 제공" },
+                  { t: "전략적 파트너십", d: "단순 투자를 넘어선 비즈니스 파트너십 구축 지원" },
+                  { t: "투자유치 실행", d: "신년 전략과 자금 연계를 통한 실무적 로드맵 설계" }
+                ].map((item, idx) => (
+                  <li key={idx} className="border-l-2 border-gold/20 pl-4 py-1">
+                    <div className="text-gold font-bold text-sm mb-1">{item.t}</div>
+                    <div className="text-white/50 text-xs leading-relaxed">{item.d}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Category 3: AI 및 미래 기술 */}
+            <div className="bg-navy p-10 border border-white/5 rounded-sm hover:border-gold/30 transition-colors group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                </div>
+                <h4 className="text-xl font-bold text-white serif">AI 및 미래 혁신 기술</h4>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  { t: "AI 투자 심사 대응", d: "AI 기반 투자 심사 알고리즘에 최적화된 대응 솔루션" },
+                  { t: "디지털 자산 & 블록체인", d: "블록체인협회 자문 및 디지털 자산 전문 컨설팅" },
+                  { t: "ICT 융합 기술", d: "모바일, IPTV, 차세대 네트워크 및 웹경제 분석" },
+                  { t: "산업 트렌드 분석", d: "미래학 기반의 산업 트렌드 예측 및 경영 전략 수립" }
+                ].map((item, idx) => (
+                  <li key={idx} className="border-l-2 border-gold/20 pl-4 py-1">
+                    <div className="text-gold font-bold text-sm mb-1">{item.t}</div>
+                    <div className="text-white/50 text-xs leading-relaxed">{item.d}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Category 4: 경영 관리 및 창업 */}
+            <div className="bg-navy p-10 border border-white/5 rounded-sm hover:border-gold/30 transition-colors group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-navy transition-all">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                </div>
+                <h4 className="text-xl font-bold text-white serif">경영 관리 및 창업 전략</h4>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  { t: "거버넌스 및 시스템", d: "기업 거버넌스 확립 및 효율적 경영 관리 시스템 구축" },
+                  { t: "비즈니스 모델(BM)", d: "시장성 분석을 통한 최적 비즈니스 모델 피벗팅 지원" },
+                  { t: "기업가 정신 교육", d: "200회 이상의 강의 경력을 바탕으로 한 CEO 코칭" },
+                  { t: "경영 콘텐츠 개발", d: "‘메일로 읽는 경영’ 등 독창적인 경영 관리 프로그램 운영" }
+                ].map((item, idx) => (
+                  <li key={idx} className="border-l-2 border-gold/20 pl-4 py-1">
+                    <div className="text-gold font-bold text-sm mb-1">{item.t}</div>
+                    <div className="text-white/50 text-xs leading-relaxed">{item.d}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
