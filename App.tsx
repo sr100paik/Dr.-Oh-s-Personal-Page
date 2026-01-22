@@ -72,15 +72,18 @@ const Header = () => {
 };
 
 const Footer = () => {
-  const [selectedSite, setSelectedSite] = useState('');
+  const handleSiteChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const url = e.target.value;
+    if (!url) return;
 
-  const handleGo = () => {
-    if (selectedSite === 'no-url') {
+    if (url === 'no-url') {
       alert('해당 파트너의 홈페이지 정보가 없습니다.');
-    } else if (selectedSite) {
-      window.open(selectedSite, '_blank');
+      // 선택 상태 초기화 (사용자가 다시 선택할 수 있도록)
+      e.target.value = "";
     } else {
-      alert('방문하실 사이트를 선택해주세요.');
+      window.open(url, '_blank');
+      // 이동 후 선택 상태 초기화
+      e.target.value = "";
     }
   };
 
@@ -103,34 +106,27 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h4 className="text-2xl font-bold text-white mb-6 serif">Family Site</h4>
-          <div className="flex items-stretch gap-2">
-            <div className="flex-grow relative">
-              <select 
-                value={selectedSite}
-                onChange={(e) => setSelectedSite(e.target.value)}
-                className="w-full bg-white/5 border border-white/10 text-white/70 px-4 py-4 rounded-sm outline-none focus:border-gold transition-colors appearance-none text-sm"
-              >
-                <option value="" className="bg-slate-950">파트너 선택</option>
-                <option value="https://dr-oh-s-personal-page.vercel.app" className="bg-slate-950">Pro OH 컨설팅</option>
-                <option value="https://bizfromatoz.com" className="bg-slate-950">100% 인사이트</option>
-                <option value="no-url" className="bg-slate-950">회계법인</option>
-              </select>
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/30">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-            <button 
-              onClick={handleGo}
-              className="bg-gold text-navy px-6 font-bold rounded-sm hover:bg-amber-500 transition-colors whitespace-nowrap"
+          <h4 className="text-2xl font-bold text-white mb-6 serif">Proventure Consulting Group</h4>
+          <div className="relative">
+            <select 
+              defaultValue=""
+              onChange={handleSiteChange}
+              className="w-full bg-white/5 border border-white/10 text-white/70 px-4 py-4 rounded-sm outline-none focus:border-gold transition-colors appearance-none text-sm cursor-pointer"
             >
-              이동
-            </button>
+              <option value="" className="bg-slate-950">파트너 선택 시 바로 이동</option>
+              <option value="https://dr-oh-s-personal-page.vercel.app" className="bg-slate-950">Pro OH 컨설팅 파트너</option>
+              <option value="https://bizfromatoz.com" className="bg-slate-950">백프로 인사이트 파트너</option>
+              <option value="no-url" className="bg-slate-950">세무회계 서비스 파트너</option>
+              <option value="no-url" className="bg-slate-950">법률 서비스 파트너</option>
+            </select>
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/30">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
           </div>
           <p className="mt-4 text-[11px] text-white/30 italic">
-            * 관계회사 홈페이지로 바로 연결됩니다.
+            * 리스트에서 선택 시 파트너 홈페이지로 즉시 이동합니다.
           </p>
         </div>
       </div>
