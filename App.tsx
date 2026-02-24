@@ -106,18 +106,18 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h4 className="text-2xl font-bold text-white mb-6 serif">Proventure Consulting Group</h4>
+          <h4 className="text-white font-bold mb-6">Proventure Consulting Group</h4>
           <div className="relative">
             <select 
               defaultValue=""
               onChange={handleSiteChange}
               className="w-full bg-white/5 border border-white/10 text-white/70 px-4 py-4 rounded-sm outline-none focus:border-gold transition-colors appearance-none text-sm cursor-pointer"
             >
-              <option value="" className="bg-slate-950">파트너 선택 시 바로 이동</option>
-              <option value="https://dr-oh-s-personal-page.vercel.app" className="bg-slate-950">Pro OH 컨설팅 파트너</option>
-              <option value="https://bizfromatoz.com" className="bg-slate-950">백프로 인사이트 파트너</option>
-              <option value="no-url" className="bg-slate-950">세무회계 서비스 파트너</option>
-              <option value="no-url" className="bg-slate-950">법률 서비스 파트너</option>
+              <option value="" className="bg-slate-950">파트너 선택</option>
+              <option value="https://dr-oh-s-personal-page.vercel.app" className="bg-slate-950">벤처자문 서비스 파트너</option>
+              <option value="https://bizfromatoz.com" className="bg-slate-950">경영전략 서비스 파트너</option>
+              <option value="no-url" className="bg-slate-950">재무자문 서비스 파트너</option>
+              <option value="no-url" className="bg-slate-950">법률자문 서비스 파트너</option>
             </select>
             <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/30">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
